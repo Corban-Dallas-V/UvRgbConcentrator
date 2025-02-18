@@ -1,0 +1,25 @@
+<library> 
+<repositories>
+    <!-- path to modm repository -->
+    <repository>
+      <path>../../modm-template/ext/modm/repo.lb</path>
+    </repository>
+  </repositories>
+  <extends>modm:nucleo-f410rb</extends>
+  <options>
+    <option name="modm:build:build.path">../build/UvRgbConcentrator</option>
+  </options>
+  <modules>
+    <module>modm:driver:tcs3472</module>
+    <module>modm:driver:veml6040</module>
+    <module>modm:driver:veml6070</module>
+    <module>modm:platform:gpio</module>
+    <module>modm:platform:i2c.bitbang</module>
+    <module>modm:platform:i2c:1</module>
+    <module>modm:platform:uart:2</module>
+    <module>modm:processing:protothread</module>
+    <module>modm:processing:timer</module>
+    <module>modm:build:scons</module>
+    <module>modm:docs</module>
+  </modules>
+</library>
